@@ -20,10 +20,10 @@ import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
 import { thArray, tdArray } from "variables/Variables.jsx";
-import Button from '../components/CustomButton/CustomButton'
+import Button from '../../components/CustomButton/CustomButton'
 
 
-class TableList extends Component {
+class Usuarios extends Component {
   state = {
     usuarios: [
       {
@@ -152,4 +152,4 @@ class TableList extends Component {
   }
 }
 
-export default TableList;
+export default Usuarios;

@@ -17,13 +17,14 @@
 */
 import React, {Component} from "react";
 import {Grid, Row, Col} from "react-bootstrap";
+import {Link} from "react-router";
 
 import Card from "components/Card/Card.jsx";
-import Button from '../components/CustomButton/CustomButton'
-import classes from "../components/Card/Card.module.css";
+import Button from '../../components/CustomButton/CustomButton'
+import classes from "../../components/Card/Card.module.css";
 
 
-class Typography extends Component {
+class Noticias extends Component {
 
   state = {
     noticias: [
@@ -71,6 +72,9 @@ class Typography extends Component {
     ]
   }
 
+  clickHandler = () => {
+    this.props.history.push('novanoticia')
+  }
 
   removeNewsHandler = (id) => {
     let updatedNews = this.state.noticias;
@@ -113,6 +117,7 @@ class Typography extends Component {
             <Button bsStyle="primary"
                     bsSize="lg"
                     fill
+                    onClick={this.clickHandler}
             >
               Nova Notícia
             </Button>
@@ -127,4 +132,4 @@ class Typography extends Component {
   }
 }
 
-export default Typography;
+export default Noticias;

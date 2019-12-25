@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2f9bc6-43f1-4363-a083-0cdd06367e70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/Noticias/NovaNoticia.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Typography.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Typography.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/Variables.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/Variables.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/TableList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Usuarios/Usuarios.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Typography.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Noticias/Noticias.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +31,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\iurym\react-projects\websites\lpa-site-dash\src\views\Usuarios" />
+      <recent name="C:\Users\iurym\react-projects\websites\lpa-site-dash\src\views\Noticias" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -58,7 +68,7 @@
       <workItem from="1576878481642" duration="2215000" />
       <workItem from="1577210259152" duration="50000" />
       <workItem from="1577210461601" duration="3945000" />
-      <workItem from="1577301832973" duration="5909000" />
+      <workItem from="1577301832973" duration="9966000" />
     </task>
     <servers />
   </component>

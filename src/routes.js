@@ -17,8 +17,9 @@
 */
 import Dashboard from "views/Dashboard.jsx";
 import UserProfile from "views/UserProfile.jsx";
-import TableList from "views/TableList.jsx";
-import Typography from "views/Typography.jsx";
+import Usuarios from "./views/Usuarios/Usuarios.jsx";
+import Noticias from "./views/Noticias/Noticias.jsx";
+import NovaNoticia from "./views/Noticias/NovaNoticia";
 import Icons from "views/Icons.jsx";
 import Notifications from "views/Notifications.jsx";
 
@@ -31,24 +32,32 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/user",
+    path: "/usuario",
     name: "Meu Perfil",
     icon: "pe-7s-user",
     component: UserProfile,
     layout: "/admin"
   },
   {
-    path: "/table",
+    path: "/usuarios",
     name: "Lista de Usuários",
     icon: "pe-7s-note2",
-    component: TableList,
+    component: Usuarios,
     layout: "/admin"
   },
   {
-    path: "/typography",
+    path: "/noticias",
     name: "Notícias",
     icon: "pe-7s-news-paper",
-    component: Typography,
+    component: Noticias,
+    layout: "/admin"
+  },
+  {
+    path: "/novanoticia",
+    name: "Notícias",
+    icon: "pe-7s-news-paper",
+    component: NovaNoticia,
+    invisible: true,
     layout: "/admin"
   },
   {
