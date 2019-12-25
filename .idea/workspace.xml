@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2f9bc6-43f1-4363-a083-0cdd06367e70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Card/Card.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/Variables.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/Variables.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Icons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Icons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/TableList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TableList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Typography.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Typography.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserProfile.jsx" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,20 +21,26 @@
   </component>
   <component name="ProjectId" id="1UlsA2arZ0mxNmexvrkdqiPFuJ2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -46,7 +57,12 @@
       <workItem from="1575942371424" duration="3594000" />
       <workItem from="1576101381744" duration="1589000" />
       <workItem from="1576187430412" duration="2155000" />
-      <workItem from="1576690485884" duration="5044000" />
+      <workItem from="1576690485884" duration="10596000" />
+      <workItem from="1576720677053" duration="1939000" />
+      <workItem from="1576878481642" duration="2215000" />
+      <workItem from="1577210259152" duration="50000" />
+      <workItem from="1577210461601" duration="3945000" />
+      <workItem from="1577301832973" duration="4324000" />
     </task>
     <servers />
   </component>
@@ -58,10 +74,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1577213698187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577213698187" />
   </component>
 </project>

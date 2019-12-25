@@ -17,55 +17,76 @@
 */
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
-
-import Card from "components/Card/Card";
-import { iconsArray } from "variables/Variables.jsx";
+import Button from '../components/CustomButton/CustomButton'
+import Card from '../components/Card/Card'
 
 class Icons extends Component {
+
   render() {
+
+    const projetos = {
+      projeto: [
+        {
+          id: 1,
+          author: 'Iury Melo',
+          date: '02/12/2019',
+          title: 'Desenvolvimento de um reator nuclear',
+          category: 'TCC',
+          body: 'Projeto para desenvolver um reator nuclear para smartphones'
+        },
+        {
+          id: 2,
+          author: 'Iury Melo',
+          date: '02/12/2019',
+          title: 'Desenvolvimento de um reator nuclear',
+          category: 'TCC',
+          body: 'Projeto para desenvolver um reator nuclear para smartphones'
+        },
+        {
+          id: 3,
+          author: 'Iury Melo',
+          date: '02/12/2019',
+          title: 'Desenvolvimento de um reator nuclear',
+          category: 'TCC',
+          body: 'Projeto para desenvolver um reator nuclear para smartphones'
+        },
+        {
+          id: 4,
+          author: 'Iury Melo',
+          date: '02/12/2019',
+          title: 'Desenvolvimento de um reator nuclear',
+          category: 'TCC',
+          body: 'Projeto para desenvolver um reator nuclear para smartphones'
+        },
+      ]
+    };
+
+    const projects = [...projetos.projeto].map(projeto => (
+      <Col key={projeto.id} md={4}>
+        <Card
+          news
+          title={projeto.title}
+          category={projeto.category}
+          content={
+            projeto.body
+          }
+        />
+      </Col>
+    ))
+
     return (
       <div className="content">
         <Grid fluid>
+          <div style={{paddingBottom:'20px'}}>
+            <Button bsStyle="primary"
+                    bsSize="lg"
+                    fill
+            >
+              Novo Projeto
+            </Button>
+          </div>
           <Row>
-            <Col md={12}>
-              <Card
-                title="202 Awesome Stroke Icons"
-                ctAllIcons
-                category={
-                  <span>
-                    Handcrafted by our friends from{" "}
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="http://themes-pixeden.com/font-demos/7-stroke/index.html"
-                    >
-                      Pixeden
-                    </a>
-                  </span>
-                }
-                content={
-                  <Row>
-                    {iconsArray.map((prop, key) => {
-                      return (
-                        <Col
-                          lg={2}
-                          md={3}
-                          sm={4}
-                          xs={6}
-                          className="font-icon-list"
-                          key={key}
-                        >
-                          <div className="font-icon-detail">
-                            <i className={prop} />
-                            <input type="text" defaultValue={prop} />
-                          </div>
-                        </Col>
-                      );
-                    })}
-                  </Row>
-                }
-              />
-            </Col>
+            {projects}
           </Row>
         </Grid>
       </div>

@@ -266,7 +266,7 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Nome", "Tipo", "Qtde Projetos", "", ""];
+const thArray = ["ID", "Nome", "Tipo", "Qtde Projetos", " ", " "];
 const tdArray = [
   ["1", "Roderval Marcelino", "Professor", "2", "Editar", "Excluir"],
   ["2", "Iury Melo", "Aluno Mestrado", "2", "Editar", "Excluir"],

@@ -80,10 +80,6 @@ class UserProfile extends Component {
 
   render() {
 
-    const formInputHandler = (input) => {
-
-    };
-
     const interests = [...this.state.user.interest].join(', ');
 
     const projetos = [...this.state.projects].map(projeto => (
@@ -92,8 +88,7 @@ class UserProfile extends Component {
         <td>{projeto.name}</td>
         <td>{projeto.type}</td>
       </tr>
-    ))
-
+    ));
 
     return (
       <div className="content">
@@ -120,7 +115,8 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Username",
-                          defaultValue: this.state.user.username
+                          defaultValue: this.state.user.username,
+
                         },
                         {
                           label: "Email",
@@ -225,7 +221,7 @@ class UserProfile extends Component {
                         </FormGroup>
                       </Col>
                     </Row>
-                    <Button bsStyle="info" pullRight fill type="submit">
+                    <Button bsStyle="info" pullRight fill>
                       Update Profile
                     </Button>
                     <div className="clearfix" />
@@ -268,7 +264,7 @@ class UserProfile extends Component {
             <Col md={4}>
               <Card
                 title="Projetos"
-                category="Here is a subtitle for this table"
+                category="Lista de Projetos em Execução"
                 ctTableFullWidth
                 ctTableResponsive
                 content={

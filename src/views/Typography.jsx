@@ -15,21 +15,22 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
-import { Grid, Row, Col } from "react-bootstrap";
+import React, {Component} from "react";
+import {Grid, Row, Col} from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
+import Button from '../components/CustomButton/CustomButton'
 
 class Typography extends Component {
   news = {
     noticias: [
       {
-      id: 1,
-      author: 'Iury Melo',
-      date: '02/12/2019',
-      title: 'Kraken Invade Morro dos Conventos',
-      category: 'Realidade',
-      body: 'Um kraken invadiu a praia do morro dos conventos nessa tarde.'
+        id: 1,
+        author: 'Iury Melo',
+        date: '02/12/2019',
+        title: 'Kraken Invade Morro dos Conventos',
+        category: 'Realidade',
+        body: 'Um kraken invadiu a praia do morro dos conventos nessa tarde.'
       },
       {
         id: 2,
@@ -66,27 +67,38 @@ class Typography extends Component {
 
     ]
   }
+
   render() {
     const news = [...this.news.noticias].map(noticias => (
       <Col key={noticias.id} md={4}>
         <Card
+          news
           title={noticias.title}
           category={noticias.category}
           content={
             noticias.body
           }
-
         />
       </Col>
-    ) )
+
+    ))
     return (
       <div className="content">
         <Grid fluid>
+          <div style={{paddingBottom:'20px'}}>
+            <Button bsStyle="primary"
+                    bsSize="lg"
+                    fill
+            >
+              Nova Notícia
+            </Button>
+          </div>
           <Row>
             {news}
           </Row>
         </Grid>
       </div>
+
     );
   }
 }
