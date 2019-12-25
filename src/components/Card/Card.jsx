@@ -23,24 +23,7 @@ import classes from './Card.module.css'
 
 export class Card extends Component {
   render() {
-    let botao = null;
-    if(this.props.news)
-    {
-      botao = (
-        <div className={classes.ButtonContainer}>
-          <div className={classes.ButtonSpace}>
-            <Button bsStyle="info" pullRight fill type="submit">
-              Editar
-            </Button>
-          </div>
-          <div className={classes.ButtonSpace}>
-            <Button bsStyle="danger" pullRight fill type="submit">
-              Excluir
-            </Button>
-          </div>
-        </div>
-      )
-    }
+
     return (
       <div className={"card" + (this.props.plain ? " card-plain" : "")}>
         <div className={"header" + (this.props.hCenter ? " text-center" : "")}>
@@ -65,7 +48,6 @@ export class Card extends Component {
               <i className={this.props.statsIcon} /> {this.props.stats}
             </div>
           </div>
-          {botao}
         </div>
       </div>
     );

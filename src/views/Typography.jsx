@@ -20,9 +20,12 @@ import {Grid, Row, Col} from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
 import Button from '../components/CustomButton/CustomButton'
+import classes from "../components/Card/Card.module.css";
+
 
 class Typography extends Component {
-  news = {
+
+  state = {
     noticias: [
       {
         id: 1,
@@ -68,11 +71,32 @@ class Typography extends Component {
     ]
   }
 
+
+  removeNewsHandler = (id) => {
+    let updatedNews = this.state.noticias;
+
+    updatedNews = updatedNews.filter(el => el.id !== id);
+    this.setState({noticias: updatedNews});
+  };
+
+
+
   render() {
-    const news = [...this.news.noticias].map(noticias => (
+    const news = [...this.state.noticias].map(noticias => (
       <Col key={noticias.id} md={4}>
+        <div className={classes.ButtonContainer}>
+          <div className={classes.ButtonSpace}>
+            <Button bsStyle="info" pullRight fill type="submit">
+              Editar
+            </Button>
+          </div>
+          <div className={classes.ButtonSpace}>
+            <Button onClick={(id) => this.removeNewsHandler(noticias.id)} bsStyle="danger" pullRight fill type="submit">
+              Excluir
+            </Button>
+          </div>
+        </div>
         <Card
-          news
           title={noticias.title}
           category={noticias.category}
           content={
