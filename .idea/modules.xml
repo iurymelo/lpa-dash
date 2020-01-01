@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/lpa-site-dash.iml" filepath="$PROJECT_DIR$/.idea/lpa-site-dash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redux-adv-burger--02-finished/.idea/redux-adv-burger--02-finished.iml" filepath="$PROJECT_DIR$/../redux-adv-burger--02-finished/.idea/redux-adv-burger--02-finished.iml" />
     </modules>
   </component>
 </project>

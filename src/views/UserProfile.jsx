@@ -16,6 +16,8 @@
 
 */
 import React, { Component } from "react";
+import { connect } from 'react-redux'
+
 import {
   Grid,
   Row,
@@ -36,26 +38,6 @@ import avatar from "assets/img/faces/face-3.jpg";
 
 class UserProfile extends Component {
   state = {
-    user: {
-      id: 1,
-      name:'Roderval Marcelino',
-      address: {
-        street: 'Rua 1, Cidade Alta',
-        city: 'Araranguá',
-      },
-      username: 'roderval.marcelino',
-      type: 'Professor',
-      email:'roderval@yahoo.com',
-      enrollmentNumber: '2025420',
-      password: 'password',
-      phone: '(48) 99999-9999',
-      bankInfo: {
-        bank: 'BB',
-        agency: '01',
-        account: '010101-01',
-      },
-      interest: ['IA', 'Software Embarcado', 'Sensoriamento'],
-    },
     projects: [
       {
         id: 1,
@@ -80,7 +62,7 @@ class UserProfile extends Component {
 
   render() {
 
-    const interests = [...this.state.user.interest].join(', ');
+    const interests = [...this.props.usr.interest].join(', ');
 
     const projetos = [...this.state.projects].map(projeto => (
       <tr key={projeto.id}>
@@ -107,7 +89,7 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Tipo",
-                          defaultValue: this.state.user.type,
+                          defaultValue: this.props.usr.type,
                           disabled: true
                         },
                         {
@@ -115,7 +97,7 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Username",
-                          defaultValue: this.state.user.username,
+                          defaultValue: this.props.usr.username,
 
                         },
                         {
@@ -123,7 +105,7 @@ class UserProfile extends Component {
                           type: "email",
                           bsClass: "form-control",
                           placeholder: "Email",
-                          defaultValue: this.state.user.email
+                          defaultValue: this.props.usr.email
                         },
                         {
                           label: "Senha",
@@ -142,14 +124,14 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Nome",
-                          defaultValue: this.state.user.username
+                          defaultValue: this.props.usr.username
                         },
                         {
                           label: "Matrícula",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Matrícula",
-                          defaultValue: this.state.user.enrollmentNumber
+                          defaultValue: this.props.usr.enrollmentNumber
                         }
                       ]}
                     />
@@ -161,21 +143,21 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Endereço",
-                          defaultValue: this.state.user.address.street,
+                          defaultValue: this.props.usr.address.street,
                         },
                         {
                           label: "Cidade",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Cidade",
-                          defaultValue: this.state.user.address.city
+                          defaultValue: this.props.usr.address.city
                         },
                         {
                           label: "Telefone (What's App)",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Telefone",
-                          defaultValue: this.state.user.phone
+                          defaultValue: this.props.usr.phone
                         },
 
                       ]}
@@ -188,21 +170,21 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Banco",
-                          defaultValue: this.state.user.bankInfo.bank
+                          defaultValue: this.props.usr.bankInfo.bank
                         },
                         {
                           label: "Agência",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Agência",
-                          defaultValue: this.state.user.bankInfo.agency,
+                          defaultValue: this.props.usr.bankInfo.agency,
                         },
                         {
                           label: "Conta",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Conta",
-                          defaultValue: this.state.user.bankInfo.account
+                          defaultValue: this.props.usr.bankInfo.account
                         }
                       ]}
                     />
@@ -233,17 +215,17 @@ class UserProfile extends Component {
               <UserCard
                 bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
                 avatar={avatar}
-                name={this.state.user.name}
-                userName={this.state.user.username}
+                name={this.props.usr.name}
+                userName={this.props.usr.username}
                 description={
                   <span>
-                    {this.state.user.type}
+                    {this.props.usr.type}
                     <br />
-                    {this.state.user.email}
+                    {this.props.usr.email}
                     <br />
-                    {this.state.user.phone}
+                    {this.props.usr.phone}
                     <br />
-                    {this.state.user.enrollmentNumber}
+                    {this.props.usr.enrollmentNumber}
                   </span>
                 }
                 socials={
@@ -290,4 +272,10 @@ class UserProfile extends Component {
   }
 }
 
-export default UserProfile;
+const mapStateToProps = state => {
+  return {
+    usr: state.user,
+  }
+}
+
+export default connect(mapStateToProps)(UserProfile);

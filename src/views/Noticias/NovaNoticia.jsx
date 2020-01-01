@@ -40,7 +40,7 @@ class NovaNoticia extends Component {
                     <Row>
                       <Col md={12}>
                         <FormGroup controlId="formControlsTextarea">
-                          <ControlLabel>Tópicos de Interesse</ControlLabel>
+                          <ControlLabel>Texto da Notícia</ControlLabel>
                           <FormControl
                             rows="9"
                             componentClass="textarea"
