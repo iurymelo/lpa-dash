@@ -37,7 +37,17 @@ import Button from "components/CustomButton/CustomButton.jsx";
 import avatar from "assets/img/faces/face-3.jpg";
 
 class UserProfile extends Component {
+ /*this state is used as an auxiliary so the user has the opportunity to cancel any actions without hitting the actual state*/
   state = {
+    userAux: {
+      ...this.props.usr,
+      address: {
+        ...this.props.usr.address,
+      },
+      bankInfo: {
+        ...this.props.usr.bankInfo,
+      },
+    },
     projects: [
       {
         id: 1,
@@ -58,9 +68,49 @@ class UserProfile extends Component {
 
   };
 
+  /* Function to handle the form changes */
+  onUpdateHandler = (event, identifier) => {
+    const updatedUser = {
+      ...this.state.userAux,
+      address: {
+        ...this.state.userAux.address,
+      },
+      bankInfo: {
+        ...this.state.userAux.bankInfo,
+      },
+    };
+    let updatedFormElement = null;
+
+    // Verify the identifier so it can adjust to nested objects (address and bank info)
+    if (identifier === 'street' || identifier === 'city') {
+      updatedFormElement = {
+        ...updatedUser.address[identifier]
+      };
+      updatedFormElement.value = event.target.value;
+      updatedUser.address[identifier] = updatedFormElement.value;
+    }
+    if (identifier === 'bank' || identifier === 'agency' || identifier === 'account') {
+      updatedFormElement = {
+        ...updatedUser.bankInfo[identifier]
+      };
+      updatedFormElement.value = event.target.value;
+      updatedUser.bankInfo[identifier] = updatedFormElement.value;
+    }
+    else {
+      updatedFormElement = {
+        ...updatedUser[identifier]
+      };
+      updatedFormElement.value = event.target.value;
+      updatedUser[identifier] = updatedFormElement.value;
+    }
+
+    this.setState({userAux: updatedUser});
+  };
+
 
 
   render() {
+
 
     const interests = [...this.props.usr.interest].join(', ');
 
@@ -98,6 +148,7 @@ class UserProfile extends Component {
                           bsClass: "form-control",
                           placeholder: "Username",
                           defaultValue: this.props.usr.username,
+                          onChange: (event) => this.onUpdateHandler(event, 'username')
 
                         },
                         {
@@ -105,7 +156,8 @@ class UserProfile extends Component {
                           type: "email",
                           bsClass: "form-control",
                           placeholder: "Email",
-                          defaultValue: this.props.usr.email
+                          defaultValue: this.props.usr.email,
+                          onChange: (event) => this.onUpdateHandler(event, 'email')
                         },
                         {
                           label: "Senha",
@@ -124,14 +176,16 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Nome",
-                          defaultValue: this.props.usr.username
+                          defaultValue: this.props.usr.name,
+                          onChange: (event) => this.onUpdateHandler(event, 'name')
                         },
                         {
                           label: "Matrícula",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Matrícula",
-                          defaultValue: this.props.usr.enrollmentNumber
+                          defaultValue: this.props.usr.enrollmentNumber,
+                          onChange: (event) => this.onUpdateHandler(event, 'enrollmentNumber')
                         }
                       ]}
                     />
@@ -144,20 +198,23 @@ class UserProfile extends Component {
                           bsClass: "form-control",
                           placeholder: "Endereço",
                           defaultValue: this.props.usr.address.street,
+                          onChange: (event) => this.onUpdateHandler(event, 'street')
                         },
                         {
                           label: "Cidade",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Cidade",
-                          defaultValue: this.props.usr.address.city
+                          defaultValue: this.props.usr.address.city,
+                          onChange: (event) => this.onUpdateHandler(event, 'city')
                         },
                         {
                           label: "Telefone (What's App)",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Telefone",
-                          defaultValue: this.props.usr.phone
+                          defaultValue: this.props.usr.phone,
+                          onChange: (event) => this.onUpdateHandler(event, 'phone')
                         },
 
                       ]}
@@ -170,7 +227,9 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Banco",
-                          defaultValue: this.props.usr.bankInfo.bank
+                          defaultValue: this.props.usr.bankInfo.bank,
+                          onChange: (event) => this.onUpdateHandler(event, 'bank')
+
                         },
                         {
                           label: "Agência",
@@ -178,13 +237,16 @@ class UserProfile extends Component {
                           bsClass: "form-control",
                           placeholder: "Agência",
                           defaultValue: this.props.usr.bankInfo.agency,
+                          onChange: (event) => this.onUpdateHandler(event, 'agency')
+
                         },
                         {
                           label: "Conta",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Conta",
-                          defaultValue: this.props.usr.bankInfo.account
+                          defaultValue: this.props.usr.bankInfo.account,
+                          onChange: (event) => this.onUpdateHandler(event, 'account')
                         }
                       ]}
                     />
@@ -203,7 +265,7 @@ class UserProfile extends Component {
                         </FormGroup>
                       </Col>
                     </Row>
-                    <Button bsStyle="info" pullRight fill>
+                    <Button onClick={(newState) => this.props.onClickUpdate(this.state.userAux)} bsStyle="info" pullRight fill>
                       Update Profile
                     </Button>
                     <div className="clearfix" />
@@ -272,10 +334,17 @@ class UserProfile extends Component {
   }
 }
 
+/* Redux Functions */
 const mapStateToProps = state => {
   return {
     usr: state.user,
   }
-}
+};
 
-export default connect(mapStateToProps)(UserProfile);
+const mapDispatchToProps = dispatch => {
+  return {
+    onClickUpdate: (newState) => dispatch({type: 'UPDATE', userPayload: newState})
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);

@@ -23,6 +23,12 @@ const initialState ={
 }
 
 const reducer = (state = initialState, action) => {
+  if (action.type === 'UPDATE') {
+    const newState = action.userPayload;
+    state.user = newState;
+    console.log(state.user.name)
+    console.log(state.user.address.street)
+  }
   return state;
 };
 

@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2f9bc6-43f1-4363-a083-0cdd06367e70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/lpa-site-dash.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lpa-site-dash.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Noticias/NovaNoticia.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Noticias/NovaNoticia.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserProfile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +71,8 @@
       <workItem from="1577407706433" duration="1580000" />
       <workItem from="1577570883247" duration="1970000" />
       <workItem from="1577651927894" duration="1011000" />
+      <workItem from="1577908266940" duration="4176000" />
+      <workItem from="1578074909515" duration="3601000" />
     </task>
     <servers />
   </component>
