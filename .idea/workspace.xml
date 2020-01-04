@@ -4,6 +4,8 @@
     <list default="true" id="0e2f9bc6-43f1-4363-a083-0cdd06367e70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Noticias/Noticias.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Noticias/Noticias.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Noticias/NovaNoticia.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Noticias/NovaNoticia.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserProfile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +74,7 @@
       <workItem from="1577570883247" duration="1970000" />
       <workItem from="1577651927894" duration="1011000" />
       <workItem from="1577908266940" duration="4176000" />
-      <workItem from="1578074909515" duration="3601000" />
+      <workItem from="1578074909515" duration="13056000" />
     </task>
     <servers />
   </component>
@@ -101,5 +103,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577213698187" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1578085702652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578085702652" />
   </component>
 </project>

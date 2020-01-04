@@ -17,7 +17,7 @@
 */
 import React, {Component} from "react";
 import {Grid, Row, Col} from "react-bootstrap";
-import {Link} from "react-router";
+import { connect } from 'react-redux'
 
 import Card from "components/Card/Card.jsx";
 import Button from '../../components/CustomButton/CustomButton'
@@ -26,67 +26,13 @@ import classes from "../../components/Card/Card.module.css";
 
 class Noticias extends Component {
 
-  state = {
-    noticias: [
-      {
-        id: 1,
-        author: 'Iury Melo',
-        date: '02/12/2019',
-        title: 'Kraken Invade Morro dos Conventos',
-        category: 'Realidade',
-        body: 'Um kraken invadiu a praia do morro dos conventos nessa tarde.'
-      },
-      {
-        id: 2,
-        author: 'Iury Melo',
-        date: '02/12/2019',
-        title: 'Kraken Invade Morro dos Conventos',
-        category: 'Realidade',
-        body: 'Um kraken invadiu a praia do morro dos conventos nessa tarde.'
-      },
-      {
-        id: 3,
-        author: 'Iury Melo',
-        date: '02/12/2019',
-        title: 'Kraken Invade Morro dos Conventos',
-        category: 'Realidade',
-        body: 'Um kraken invadiu a praia do morro dos conventos nessa tarde.'
-      },
-      {
-        id: 4,
-        author: 'Iury Melo',
-        date: '02/12/2019',
-        title: 'Kraken Invade Morro dos Conventos',
-        category: 'Realidade',
-        body: 'Um kraken invadiu a praia do morro dos conventos nessa tarde.'
-      },
-      {
-        id: 5,
-        author: 'Iury Melo',
-        date: '02/12/2019',
-        title: 'Kraken Invade Morro dos Conventos',
-        category: 'Realidade',
-        body: 'Um kraken invadiu a praia do morro dos conventos nessa tarde.'
-      },
-
-    ]
-  }
 
   clickHandler = () => {
     this.props.history.push('novanoticia')
-  }
-
-  removeNewsHandler = (id) => {
-    let updatedNews = this.state.noticias;
-
-    updatedNews = updatedNews.filter(el => el.id !== id);
-    this.setState({noticias: updatedNews});
   };
 
-
-
   render() {
-    const news = [...this.state.noticias].map(noticias => (
+    const news = [...this.props.noticias].map(noticias => (
       <Col key={noticias.id} md={4}>
         <div className={classes.ButtonContainer}>
           <div className={classes.ButtonSpace}>
@@ -95,7 +41,7 @@ class Noticias extends Component {
             </Button>
           </div>
           <div className={classes.ButtonSpace}>
-            <Button onClick={(id) => this.removeNewsHandler(noticias.id)} bsStyle="danger" pullRight fill type="submit">
+            <Button onClick={(id) => this.props.removeNoticia(noticias.id)} bsStyle="danger" pullRight fill type="submit">
               Excluir
             </Button>
           </div>
@@ -132,4 +78,16 @@ class Noticias extends Component {
   }
 }
 
-export default Noticias;
+const mapStateToProps = state => {
+  return {
+    noticias: state.noticias
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    removeNoticia: (id) => dispatch({type: 'REMOVE_NOTICIA', identifier: id})
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Noticias);

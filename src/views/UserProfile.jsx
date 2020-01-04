@@ -343,7 +343,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onClickUpdate: (newState) => dispatch({type: 'UPDATE', userPayload: newState})
+    onClickUpdate: (newState) => dispatch({type: 'UPDATE_USER', userPayload: newState})
   }
 };
 
