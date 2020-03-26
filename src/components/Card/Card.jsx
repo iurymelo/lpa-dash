@@ -17,10 +17,6 @@
 */
 import React, { Component } from "react";
 
-import Button from "../CustomButton/CustomButton.jsx";
-
-import classes from './Card.module.css'
-
 export class Card extends Component {
   render() {
 

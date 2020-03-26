@@ -610,7 +610,7 @@ module.exports = {
   style, // For notifications (App container and Notifications view)
   thArray,
   tdArray, // For tables (Usuarios view)
-  iconsArray, // For icons (Icons view)
+  iconsArray, // For icons (Projetos view)
   dataPie,
   legendPie,
   dataSales,

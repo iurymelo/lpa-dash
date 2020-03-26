@@ -19,41 +19,33 @@ import React, { Component } from "react";
 import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
-import { thArray, tdArray } from "variables/Variables.jsx";
+import { thArray } from "variables/Variables.jsx";
 import Button from '../../components/CustomButton/CustomButton'
 
+import axios from 'axios';
 
 class Usuarios extends Component {
   state = {
     usuarios: [
-      {
-        id: '1',
-        name: "Roderval Marcelino",
-        type: "Professor",
-        numProj: "7",
-      },
-      {
-        id: '2',
-        name: "Iury Melo",
-        type: "Aluno Mestrado",
-        numProj: "2",
-      },
-
-      {
-        id: '3',
-        name: "Rodrigo Piloto",
-        type: "Aluno Mestrado",
-        numProj: "4",
-      },
-      {
-        id: '4',
-        name: "Little Luan",
-        type: "Aluno Graduação",
-        numProj: "1",
-      },
     ]
-  }
+  };
 
+  componentDidMount() {
+    axios.get('https://website-c065f.firebaseio.com/usuarios.json')
+      .then(res => {
+        const obj = Object.values(res.data);
+        obj.map(value => {
+          const novoEstado = {
+            ...this.state
+          };
+          novoEstado.usuarios.push({id: value.matricula, name: value.nome, type: value.tipo, numProj: 0})
+          this.setState(novoEstado)
+        });
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
 
   deleteObjectHandler = (id) => {

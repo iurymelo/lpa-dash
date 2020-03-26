@@ -37,7 +37,7 @@ class Admin extends Component {
       _notificationSystem: null,
       image: image,
       color: "black",
-      hasImage: true,
+      hasImage: false,
       fixedClasses: "dropdown show-dropdown open"
     };
   }
@@ -142,7 +142,7 @@ class Admin extends Component {
       default:
         break;
     }
-    _notificationSystem.addNotification({
+    /*_notificationSystem.addNotification({
       title: <span data-notify="icon" className="pe-7s-gift" />,
       message: (
         <div>
@@ -152,9 +152,9 @@ class Admin extends Component {
       level: level,
       position: "tr",
       autoDismiss: 15
-    });
+    });*/
   }
-  componentDidUpdate(e) {
+  /*componentDidUpdate(e) {
     if (
       window.innerWidth < 993 &&
       e.history.location.pathname !== e.location.pathname &&
@@ -167,7 +167,7 @@ class Admin extends Component {
       document.scrollingElement.scrollTop = 0;
       this.refs.mainPanel.scrollTop = 0;
     }
-  }
+  }*/
   render() {
     return (
       <div className="wrapper">

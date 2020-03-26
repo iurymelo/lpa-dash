@@ -20,22 +20,30 @@ import UserProfile from "views/UserProfile.jsx";
 import Usuarios from "./views/Usuarios/Usuarios.jsx";
 import Noticias from "./views/Noticias/Noticias.jsx";
 import NovaNoticia from "./views/Noticias/NovaNoticia";
-import Icons from "views/Icons.jsx";
-import Notifications from "views/Notifications.jsx";
+import Projetos from "./views/Projetos/Projetos.jsx";
+import NovoUsuario from "./views/Usuarios/NovoUsuario";
 
 const dashboardRoutes = [
-  {
+  /*{
     path: "/dashboard",
     name: "Dashboard",
     icon: "pe-7s-graph",
     component: Dashboard,
     layout: "/admin"
+  },*/
+  {
+    path: "/noticias",
+    name: "Notícias",
+    icon: "pe-7s-news-paper",
+    component: Noticias,
+    layout: "/admin"
   },
   {
-    path: "/usuario",
+    path: "/perfil",
     name: "Meu Perfil",
     icon: "pe-7s-user",
     component: UserProfile,
+    invisible: true,
     layout: "/admin"
   },
   {
@@ -46,10 +54,11 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/noticias",
-    name: "Notícias",
-    icon: "pe-7s-news-paper",
-    component: Noticias,
+    path: "/novousuario",
+    name: "Novo Usuário",
+    icon: "pe-7s-note2",
+    component: NovoUsuario,
+    invisible: true,
     layout: "/admin"
   },
   {
@@ -61,17 +70,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/icons",
+    path: "/projetos",
     name: "Projetos",
     icon: "pe-7s-science",
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/notifications",
-    name: "Tarefas e Atividades",
-    icon: "pe-7s-bell",
-    component: Notifications,
+    component: Projetos,
     layout: "/admin"
   },
 ];

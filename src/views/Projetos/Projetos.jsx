@@ -17,10 +17,12 @@
 */
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
-import Button from '../components/CustomButton/CustomButton'
-import Card from '../components/Card/Card'
+import Button from '../../components/CustomButton/CustomButton'
+import Card from '../../components/Card/Card'
+import classes from "../../components/Card/Card.module.css";
 
-class Icons extends Component {
+
+class Projetos extends Component {
 
   render() {
 
@@ -63,6 +65,18 @@ class Icons extends Component {
 
     const projects = [...projetos.projeto].map(projeto => (
       <Col key={projeto.id} md={4}>
+        <div className={classes.ButtonContainer}>
+          <div className={classes.ButtonSpace}>
+            <Button bsStyle="info" pullRight fill type="submit">
+              Editar
+            </Button>
+          </div>
+          <div className={classes.ButtonSpace}>
+            <Button  bsStyle="danger" pullRight fill type="submit">
+              Excluir
+            </Button>
+          </div>
+        </div>
         <Card
           news
           title={projeto.title}
@@ -94,4 +108,4 @@ class Icons extends Component {
   }
 }
 
-export default Icons;
+export default Projetos;

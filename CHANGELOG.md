@@ -4,7 +4,7 @@
 ### Bug fixing
 - Renamed `src/layouts/Dashboard/Dashboard.jsx` to `src/layouts/Admin.jsx`
 - Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Dashboard.jsx`
-- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Icons.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Projetos.jsx`
 - Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Maps.jsx`
 - Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Notifications.jsx`
 - Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Usuarios.jsx`
