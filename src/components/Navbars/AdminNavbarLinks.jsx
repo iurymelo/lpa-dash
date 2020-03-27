@@ -16,7 +16,7 @@
 
 */
 import React, { Component } from "react";
-import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
+import { Nav, NavDropdown, MenuItem } from "react-bootstrap";
 
 class AdminNavbarLinks extends Component {
   render() {
@@ -28,10 +28,10 @@ class AdminNavbarLinks extends Component {
             title="Menu"
             id="basic-nav-dropdown-right"
           >
-            <MenuItem eventKey={2.1}>Nova Notícia</MenuItem>
-            <MenuItem eventKey={2.2}>Novo Usuário</MenuItem>
+            <MenuItem eventKey={2.1} href={'/admin/novanoticia'}>Nova Notícia</MenuItem>
+            <MenuItem eventKey={2.2} href={'/admin/novousuario'}>Novo Usuário</MenuItem>
             <MenuItem divider />
-            <MenuItem eventKey={2.3}>Meu Perfil</MenuItem>
+            <MenuItem eventKey={2.3} href={'/admin/perfil'}>Meu Perfil</MenuItem>
             <MenuItem divider />
             <MenuItem eventKey={2.5}>LogOut</MenuItem>
           </NavDropdown>
