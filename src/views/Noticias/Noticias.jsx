@@ -82,12 +82,12 @@ const mapStateToProps = state => {
   return {
     noticias: state.noticias
   }
-}
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     removeNoticia: (id) => dispatch({type: 'REMOVE_NOTICIA', identifier: id})
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Noticias);

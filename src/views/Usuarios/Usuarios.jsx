@@ -22,47 +22,31 @@ import Card from "components/Card/Card.jsx";
 import { thArray } from "variables/Variables.jsx";
 import Button from '../../components/CustomButton/CustomButton'
 
-import axios from 'axios';
+import { connect } from 'react-redux'
+import * as actions from '../../redux/actions/index'
 
 class Usuarios extends Component {
-  state = {
-    usuarios: [
-    ]
-  };
 
   componentDidMount() {
-    axios.get('https://website-c065f.firebaseio.com/usuarios.json')
-      .then(res => {
-        const obj = Object.values(res.data);
-        obj.map(value => {
-          const novoEstado = {
-            ...this.state
-          };
-          novoEstado.usuarios.push({id: value.matricula, name: value.nome, type: value.tipo, numProj: 0})
-          this.setState(novoEstado)
-        });
-      })
-      .catch(err => {
-        console.log(err)
-      })
+   this.props.fetchUsuarios();
+   console.log(this.props.usuarios)
   }
 
 
   deleteObjectHandler = (id) => {
-    let updatedUsuarios = this.state.usuarios;
+    /*let updatedUsuarios = this.state.usuarios;
     updatedUsuarios = updatedUsuarios.filter(el => el.id !== id);
     this.setState({usuarios: updatedUsuarios});
-    console.log(this.state.usuarios)
+    console.log(this.state.usuarios)*/
   };
 
   render() {
-
-    const usuariosAtivos = this.state.usuarios.map(usuario => (
+    const usuariosAtivos = this.props.usuarios.map(usuario => (
        <tr key={usuario.id} >
          <td>{usuario.id}</td>
-         <td>{usuario.name}</td>
-         <td>{usuario.type}</td>
-         <td>{usuario.numProj}</td>
+         <td>{usuario.nome}</td>
+         <td>{usuario.tipo}</td>
+         <td>{usuario.matricula}</td>
          <td><Button size='sm' onClick={()=>{console.log('clicou')}}
          >Editar</Button>
          </td>
@@ -72,12 +56,12 @@ class Usuarios extends Component {
        </tr>
          ));
 
-    const usuariosInativos = this.state.usuarios.map(usuario => (
+    const usuariosInativos = this.props.usuarios.map(usuario => (
       <tr key={usuario.id} >
         <td>{usuario.id}</td>
-        <td>{usuario.name}</td>
-        <td>{usuario.type}</td>
-        <td>{usuario.numProj}</td>
+        <td>{usuario.nome}</td>
+        <td>{usuario.tipo}</td>
+        <td>{usuario.matricula}</td>
         <td><Button size='sm' onClick={()=>{console.log('clicou')}}
         >Adicionar</Button>
         </td>
@@ -144,4 +128,16 @@ class Usuarios extends Component {
   }
 }
 
-export default Usuarios;
+const mapStateToProps = state => {
+  return {
+    usuarios: state.usuarios.usuarios
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchUsuarios: () => dispatch(actions.fetchUsuarios())
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Usuarios);

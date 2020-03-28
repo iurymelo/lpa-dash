@@ -1,24 +1,6 @@
 const initialState ={
   user: {
-    id: 1,
-    name:'Roderval Marcelino',
-    address: {
-      street: 'Rua 1, Cidade Alta',
-      city: 'Araranguá',
-    },
-    username: 'roderval.marcelino',
-    type: 'Professor',
-    cpf: '',
-    email:'roderval@yahoo.com',
-    enrollmentNumber: '2025420',
-    password: 'password',
-    phone: '(48) 99999-9999',
-    bankInfo: {
-      bank: 'BB',
-      agency: '01',
-      account: '010101-01',
-    },
-    interest: ['IA', 'Software Embarcado', 'Sensoriamento'],
+
   },
   noticias: [
     {
@@ -64,7 +46,7 @@ const initialState ={
   ]
 };
 
-const reducer = (state = initialState, action) => {
+const noticias = (state = initialState, action) => {
   switch (action.type) {
     case 'UPDATE_USER':
       const newState = action.userPayload;
@@ -84,7 +66,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         noticias: updatedNoticias.noticias,
-      }
+      };
 
     case 'REMOVE_NOTICIA':
       console.log(state.noticias);
@@ -95,11 +77,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         noticias:  updatedNews.filter(el => el.id !== action.identifier),
-      }
+      };
 
     default:
       return state;
   }
 };
 
-export default reducer;
+export default noticias;

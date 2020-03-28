@@ -16,7 +16,7 @@
 
 */
 import React, { Component } from "react";
-import {Form, FormGroup, ControlLabel, FormControl, Row, } from "react-bootstrap";
+import {FormGroup, ControlLabel, FormControl, Row, } from "react-bootstrap";
 
 
 function FieldGroup({ label, ...props }) {

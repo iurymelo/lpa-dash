@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2f9bc6-43f1-4363-a083-0cdd06367e70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/FormInputs/Error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions/actionTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions/usuario.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/usuariosReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Usuarios/EditarUsuario.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Usuarios/UsuarioForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbars/AdminNavbarLinks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/AdminNavbarLinks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FormInputs/FormInputs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormInputs/FormInputs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Admin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Admin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/noticias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/Variables.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/Variables.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Noticias/Noticias.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Noticias/Noticias.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Noticias/NovaNoticia.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Noticias/NovaNoticia.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserProfile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Usuarios/NovoUsuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Usuarios/NovoUsuario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Usuarios/Usuarios.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Usuarios/Usuarios.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +46,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../yeey/yeey_dashboard" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\iurym\react-projects\websites\lpa-site-dash\src\redux" />
       <recent name="C:\Users\iurym\react-projects\websites\nextjs\udemy-react\components" />
       <recent name="C:\Users\iurym\react-projects\websites\lpa-site-dash\src\views\Projetos" />
       <recent name="C:\Users\iurym\react-projects\websites\lpa-site-dash\src\views\Usuarios" />
@@ -91,7 +109,8 @@
       <workItem from="1579032888413" duration="3615000" />
       <workItem from="1579564051802" duration="34000" />
       <workItem from="1585173362283" duration="11181000" />
-      <workItem from="1585247380791" duration="12399000" />
+      <workItem from="1585247380791" duration="12458000" />
+      <workItem from="1585338675249" duration="13951000" />
     </task>
     <servers />
   </component>
@@ -112,14 +131,18 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="730" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585343919531">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="730" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585343919531" />
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585173671449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585173671449" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1579564083287">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1585356543452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579564083287" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585356543452" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1577213698187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

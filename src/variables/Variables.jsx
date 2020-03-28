@@ -266,7 +266,7 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Nome", "Tipo", "Qtde Projetos", " ", " "];
+const thArray = ["ID", "Nome", "Tipo", "Matrícula", " ", " "];
 const tdArray = [
   ["1", "Roderval Marcelino", "Professor", "2", "Editar", "Excluir"],
   ["2", "Iury Melo", "Aluno Mestrado", "2", "Editar", "Excluir"],
@@ -275,15 +275,6 @@ const tdArray = [
   ["5", "Giuliano Rampineli", "Professor", "2", "Editar", 'Excluir'],
   ["7", "Luanzinho", "Aluno Graduação", "2", "Editar", "Excluir"]
 ];
-
-const thPrjArray = ["ID", "Nome", "Tipo"];
-const tdPrjArray = [
-  ["1", "Desenvolvimento de um computador Quântico", "TCC"],
-  ["2", "Ida a Marte", "Pesquisa", ],
-  ["3", "Açoitar Bolsitas", "Extensão", ],
-
-];
-
 //
 // //
 // // // For icons

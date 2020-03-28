@@ -1,0 +1,3 @@
+export {
+  fetchUsuarios,
+} from './usuario'

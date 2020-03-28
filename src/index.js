@@ -17,9 +17,8 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import {createStore} from 'redux'
-import reducer from "./store/reducer";
 import {Provider} from 'react-redux'
+
 
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
@@ -30,11 +29,10 @@ import "./assets/css/demo.css";
 import "./assets/css/pe-icon-7-stroke.css";
 
 import AdminLayout from "layouts/Admin.jsx";
-
-const store = createStore(reducer)
+import {initStore} from "./redux/index";
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={initStore()}>
     <BrowserRouter>
       <Switch>
         <Route path="/admin" render={props => <AdminLayout {...props} />}/>
@@ -43,4 +41,5 @@ ReactDOM.render(
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
-);
+)
+

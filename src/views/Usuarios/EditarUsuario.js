@@ -1,12 +1,9 @@
 import React, {Component} from "react";
-
+import axios from 'axios';
 
 import UsuarioForm from "./UsuarioForm";
 
-
-
-class NovoUsuario extends Component {
-
+class EditarUsuario extends Component {
 
   initialValues = {
     nome: '',
@@ -31,13 +28,13 @@ class NovoUsuario extends Component {
   render() {
     return (
       <div className="content">
-        <UsuarioForm titulo={'Novo Usuário'}
+        <UsuarioForm titulo={'Editar Usuário'}
                      valoresIniciais={this.initialValues}
-                     editar={false}
+                     editar
         />
       </div>
     );
   }
 }
 
-export default NovoUsuario;
+export default EditarUsuario;

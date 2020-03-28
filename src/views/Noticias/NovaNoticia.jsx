@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Col, ControlLabel, FormControl, FormGroup, Grid, Row, Table} from "react-bootstrap";
+import {Col, ControlLabel, FormControl, FormGroup, Grid, Row} from "react-bootstrap";
 import { connect } from 'react-redux'
 
 import FormInputs from "../../components/FormInputs/FormInputs";
